@@ -1,7 +1,6 @@
 package leetcode.medium.lists;
 
-import main.lists.Exc_21_MergeTwoSortedLists.ListNode;
-
+import static leetcode.medium.lists.Exc_21_MergeTwoSortedLists.ListNode;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
