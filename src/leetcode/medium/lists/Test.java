@@ -1,14 +1,14 @@
 package leetcode.medium.lists;
 
-import static leetcode.medium.lists.Exc_21_MergeTwoSortedLists.ListNode;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Test {
+
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
-        input = input.substring(1, input.length() - 1);
+        //input = input.substring(1, input.length() - 1);
         if (input.length() == 0) {
             return new int[0];
         }
@@ -49,6 +49,18 @@ public class Test {
         return "[" + result.substring(0, result.length() - 2) + "]";
     }
 
+    public static void printListNode(ListNode list) {
+        ListNode p = list;
+        while (p != null) {
+            System.out.print(p.val);
+            if (p.next != null) {
+                System.out.print("->");
+            }
+            p = p.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
@@ -64,4 +76,5 @@ public class Test {
             System.out.print(out);
         }
     }
+
 }
