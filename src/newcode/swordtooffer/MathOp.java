@@ -1,7 +1,5 @@
 package newcode.swordtooffer;
 
-import java.util.Arrays;
-
 public class MathOp {
 
     public int cutRope(int target) {
