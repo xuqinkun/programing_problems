@@ -34,15 +34,16 @@ public class Exc_15_ThreeSum {
         sort(nums);
         int last = Integer.MIN_VALUE;
         for (int i = 0 ; i < n - 2; i++) {
-            int a = nums[i];
-            if (last == a) {
+            int x = nums[i];
+            if (last == x) {
                 continue;
             } else {
-                last = a;
+                last = x;
             }
-            int t = -a;
+            int t = -x;
             int l = i + 1, r = n - 1;
-            if (a == 0 && nums[l] > 0 || a> 0) {
+            // 当前值等于0，下一个数大于0，则不可能存在以i开头且和为0的序列
+            if ((x == 0 && nums[l] > 0) || x > 0) {
                 break;
             }
             while (l < r) {
