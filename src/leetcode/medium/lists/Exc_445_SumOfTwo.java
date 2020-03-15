@@ -102,12 +102,12 @@ public class Exc_445_SumOfTwo {
 
 
     public static void main(String[] args) {
-        ListNode l1 = Test.stringToListNode("1,2");
-        ListNode l2 = Test.stringToListNode("9");
+        ListNode l1 = ListUtil.stringToListNode("1,2");
+        ListNode l2 = ListUtil.stringToListNode("9");
         Exc_445_SumOfTwo st = new Exc_445_SumOfTwo();
         ListNode ans = st.addTwoNumbers(l1, l2);
-        Test.printListNode(l1);
-        Test.printListNode(l2);
-        Test.printListNode(ans);
+        ListNode.printListNode(l1);
+        ListNode.printListNode(l2);
+        ListNode.printListNode(ans);
     }
 }

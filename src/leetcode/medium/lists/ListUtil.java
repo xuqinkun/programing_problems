@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Test {
+public class ListUtil {
 
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
@@ -36,31 +36,6 @@ public class Test {
         return dummyRoot.next;
     }
 
-    public static String listNodeToString(ListNode node) {
-        if (node == null) {
-            return "[]";
-        }
-
-        String result = "";
-        while (node != null) {
-            result += Integer.toString(node.val) + ", ";
-            node = node.next;
-        }
-        return "[" + result.substring(0, result.length() - 2) + "]";
-    }
-
-    public static void printListNode(ListNode list) {
-        ListNode p = list;
-        while (p != null) {
-            System.out.print(p.val);
-            if (p.next != null) {
-                System.out.print("->");
-            }
-            p = p.next;
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
@@ -69,9 +44,9 @@ public class Test {
             line = in.readLine();
             ListNode l2 = stringToListNode(line);
 
-            ListNode ret = new Exc_21_MergeTwoSortedLists().mergeTwoLists(l1, l2);
+            ListNode ret = new Exc_021_MergeTwoSortedLists().mergeTwoLists(l1, l2);
 
-            String out = listNodeToString(ret);
+            String out = ListNode.listNodeToString(ret);
 
             System.out.print(out);
         }

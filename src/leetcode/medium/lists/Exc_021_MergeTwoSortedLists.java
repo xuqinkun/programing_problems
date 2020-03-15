@@ -9,7 +9,7 @@ package leetcode.medium.lists;
  * Output: 1->1->2->3->4->4
  */
 
-public class Exc_21_MergeTwoSortedLists {
+public class Exc_021_MergeTwoSortedLists {
 
     private static final int INITIAL_VALUE = -1;
 
@@ -72,7 +72,7 @@ public class Exc_21_MergeTwoSortedLists {
 
     public static void main(String[] args) {
         ListNode node = new ListNode(10);
-        Exc_21_MergeTwoSortedLists demo = new Exc_21_MergeTwoSortedLists();
+        Exc_021_MergeTwoSortedLists demo = new Exc_021_MergeTwoSortedLists();
         ListNode cur = node;
         demo.test(cur);
         demo.print(node);
