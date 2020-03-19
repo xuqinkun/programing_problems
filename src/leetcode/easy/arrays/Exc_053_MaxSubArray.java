@@ -8,7 +8,7 @@ package leetcode.easy.arrays;
  * Description: 最大子序和
  */
 
-public class Exc_53_MaxSubArray {
+public class Exc_053_MaxSubArray {
 
     public int maxSubArray(int[] nums) {
         return helper(nums, 0, nums.length - 1);
@@ -44,7 +44,7 @@ public class Exc_53_MaxSubArray {
     }
 
     public static void main(String[] args) {
-        Exc_53_MaxSubArray ms = new Exc_53_MaxSubArray();
+        Exc_053_MaxSubArray ms = new Exc_053_MaxSubArray();
         int[] a = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(ms.maxSubArray(a));
     }
