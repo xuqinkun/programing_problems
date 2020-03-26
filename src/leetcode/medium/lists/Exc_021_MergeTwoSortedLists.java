@@ -1,5 +1,7 @@
 package leetcode.medium.lists;
 
+import leetcode.util.ListNode;
+
 /**
  * Merge two sorted linked main.lists and return it as a new list. The new list should be made by splicing together the nodes of the first two main.lists.
  * <p>

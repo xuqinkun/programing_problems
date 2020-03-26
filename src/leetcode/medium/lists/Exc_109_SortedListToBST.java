@@ -1,6 +1,7 @@
 package leetcode.medium.lists;
 
-import leetcode.easy.tree.TreeNode;
+import leetcode.util.ListNode;
+import leetcode.util.TreeNode;
 
 import java.util.ArrayList;
 

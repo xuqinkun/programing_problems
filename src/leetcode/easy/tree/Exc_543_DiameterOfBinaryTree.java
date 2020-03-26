@@ -1,5 +1,7 @@
 package leetcode.easy.tree;
 
+import leetcode.util.TreeNode;
+
 /**
  * Copyright (C), 2018-2020
  * FileName: Exc_543_DiameterOfBinaryTree

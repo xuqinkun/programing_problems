@@ -1,6 +1,8 @@
 package leetcode.medium.lists;
 
 
+import leetcode.util.ListNode;
+
 public class Exc_002_SumOfTwo {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

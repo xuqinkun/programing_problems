@@ -1,4 +1,6 @@
-package leetcode.medium.lists;
+package leetcode.util;
+
+import leetcode.medium.lists.Exc_021_MergeTwoSortedLists;
 
 import java.io.BufferedReader;
 import java.io.IOException;

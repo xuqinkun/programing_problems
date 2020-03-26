@@ -1,5 +1,7 @@
 package leetcode.medium.lists;
 
+import leetcode.util.ListNode;
+
 /**
  * Copyright (C), 2018-2020
  * FileName: Exc_142_DetectCycle

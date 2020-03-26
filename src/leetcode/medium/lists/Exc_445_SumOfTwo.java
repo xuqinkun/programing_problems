@@ -1,5 +1,8 @@
 package leetcode.medium.lists;
 
+import leetcode.util.ListNode;
+import leetcode.util.ListUtil;
+
 import java.util.Stack;
 
 /**

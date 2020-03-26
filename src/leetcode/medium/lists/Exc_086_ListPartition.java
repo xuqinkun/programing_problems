@@ -1,5 +1,7 @@
 package leetcode.medium.lists;
 
+import leetcode.util.ListNode;
+
 public class Exc_086_ListPartition {
 
     public ListNode partition(ListNode head, int x) {

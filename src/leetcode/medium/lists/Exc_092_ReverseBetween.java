@@ -1,5 +1,7 @@
 package leetcode.medium.lists;
 
+import leetcode.util.ListNode;
+
 public class Exc_092_ReverseBetween {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
