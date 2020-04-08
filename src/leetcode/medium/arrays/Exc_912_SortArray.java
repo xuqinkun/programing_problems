@@ -1,6 +1,5 @@
 package leetcode.medium.arrays;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
