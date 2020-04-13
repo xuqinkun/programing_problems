@@ -1,4 +1,4 @@
-package leetcode.medium.others;
+package leetcode.medium.design;
 
 class A {
     public String show(D obj) {

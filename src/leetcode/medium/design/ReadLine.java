@@ -1,4 +1,4 @@
-package leetcode.medium.others;
+package leetcode.medium.design;
 
 public class ReadLine {
     //已知函数

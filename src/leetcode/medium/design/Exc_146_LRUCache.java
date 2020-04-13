@@ -1,4 +1,4 @@
-package leetcode.medium.others;
+package leetcode.medium.design;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package leetcode.medium.others;
+package leetcode.medium.math;
 
 /**
  * Description:
