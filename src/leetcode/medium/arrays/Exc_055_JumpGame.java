@@ -23,9 +23,25 @@ public class Exc_055_JumpGame {
         return canJump(nums, len - 1, jumpRecords);
     }
 
+    public boolean canJump2(int[] nums) {
+        int n = nums.length;
+        if (n == 0) return false;
+        int maxStep = nums[0];
+        for (int i = 1; i < n; i++) {
+            if (maxStep == 0) {
+                return false;
+            }
+            maxStep--;
+            if (nums[i] > maxStep) {
+                maxStep = nums[i];
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Exc_055_JumpGame jg = new Exc_055_JumpGame();
-        int[] nums = new int[]{};
-        System.out.println(jg.canJump(nums));
+        int[] nums = new int[]{2, 3, 1, 1, 4};
+        System.out.println(jg.canJump2(nums));
     }
 }
