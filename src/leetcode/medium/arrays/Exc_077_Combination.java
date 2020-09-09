@@ -16,7 +16,8 @@ public class Exc_077_Combination {
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> lists = new ArrayList<>();
         List<Integer> tempList = new ArrayList<>();
-        combine(n, 1, k, lists, tempList);
+//        combine(n, 1, k, lists, tempList);
+        dfs(n, 1, k, lists, tempList);
         return lists;
     }
 
@@ -31,8 +32,21 @@ public class Exc_077_Combination {
         }
     }
 
+    private void dfs(int n, int curr, int k, List<List<Integer>> lists, List<Integer> tempList) {
+        if (tempList.size() + n - curr + 1 < k)
+            return;
+        if (tempList.size() == k) {
+            lists.add(new ArrayList<>(tempList));
+            return;
+        }
+        tempList.add(curr);
+        dfs(n, curr+1,k, lists, tempList);
+        tempList.remove(tempList.size()-1);
+        dfs(n, curr+1,k, lists, tempList);
+    }
+
     public static void main(String[] args) {
         Exc_077_Combination com = new Exc_077_Combination();
-        System.out.println(com.combine(1, 1));
+        System.out.println(com.combine(4, 2));
     }
 }
