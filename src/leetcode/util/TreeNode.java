@@ -15,7 +15,10 @@ public class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
-    public TreeNode(int x) { val = x; }
+
+    public TreeNode(int x) {
+        val = x;
+    }
 
     @Override
     public String toString() {
@@ -24,7 +27,7 @@ public class TreeNode {
                 '}';
     }
 
-    public static TreeNode arrayToTree(int [] arr) {
+    public static TreeNode arrayToTree(int[] arr) {
         int n = arr.length;
         if (n == 0) return null;
         TreeNode root = new TreeNode(arr[0]);
@@ -45,5 +48,29 @@ public class TreeNode {
             i++;
         }
         return root;
+    }
+
+    public static void print(TreeNode root) {
+        if (root == null) {
+            System.out.println("Empty tree");
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        StringBuilder sb = new StringBuilder();
+        while (!queue.isEmpty()) {
+            int cnt = queue.size();
+            while (cnt-- > 0) {
+                TreeNode node = queue.remove();
+                if (node.left != null)
+                    queue.add(node.left);
+                if (node.right != null)
+                    queue.add(node.right);
+                sb.append(node.val);
+                if (!queue.isEmpty())
+                    sb.append(",");
+            }
+        }
+        System.out.println(sb.toString());
     }
 }
