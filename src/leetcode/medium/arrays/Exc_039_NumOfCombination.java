@@ -10,8 +10,8 @@ public class Exc_039_NumOfCombination {
         Arrays.sort(candidates);
         ArrayList<Integer> tempList = new ArrayList<>();
         List<List<Integer>> lists = new ArrayList<>();
-        int len = candidates.length;
-        combinationSum(candidates, len, 0, target, tempList, lists);
+        Arrays.sort(candidates);
+        dfs(candidates, 0, target, 0, lists, tempList);
         return lists;
     }
 
@@ -25,14 +25,29 @@ public class Exc_039_NumOfCombination {
             tempList.add(candidates[i]);
             combinationSum(candidates, len, i, target - candidates[i], tempList, lists);
             tempList.remove(tempList.size() - 1);
-            //combinationSum(candidates, i + 1, target, tempList, lists);
+        }
+    }
+
+    private void dfs(int[] candidates, int curr, int target, int sum, List<List<Integer>> lists, List<Integer> temp) {
+        if (sum == target) {
+            lists.add(new ArrayList<>(temp));
+            return;
+        }
+        if (sum < target) {
+            temp.add(candidates[curr]);
+            sum += candidates[curr];
+            dfs(candidates, curr, target, sum, lists, temp);
+            Integer last = temp.remove(temp.size() - 1);
+            sum -= last;
+            if (curr + 1 < candidates.length && sum + candidates[curr + 1] <= target)
+                dfs(candidates, curr + 1, target, sum, lists, temp);
         }
     }
 
     public static void main(String[] args) {
         Exc_039_NumOfCombination nc = new Exc_039_NumOfCombination();
-        int[] candidates = {21,46,35,20,44,31,29,23,45,37,33,34,39,42,24,40,41,26,22,38,36,27,25,49,48,43};
-        int target = 71;
-        System.out.println(nc.combinationSum(candidates, target));
+        int[] candidates = {21, 46, 35, 20, 44, 31, 29, 23, 45, 37, 33, 34, 39, 42, 24, 40, 41, 26, 22, 38, 36, 27, 25, 49, 48, 43};
+//        int[] candidates = {2, 3, 5};
+        System.out.println(nc.combinationSum(candidates, 51));
     }
 }

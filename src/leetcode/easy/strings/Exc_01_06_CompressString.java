@@ -1,4 +1,4 @@
-package leetcode.easy.string;
+package leetcode.easy.strings;
 
 /**
  * Copyright (C), 2018-2020
