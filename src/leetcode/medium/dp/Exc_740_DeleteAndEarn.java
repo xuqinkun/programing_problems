@@ -1,5 +1,7 @@
 package leetcode.medium.dp;
 
+import java.util.HashMap;
+
 public class Exc_740_DeleteAndEarn {
 
     public int deleteAndEarn(int[] nums) {
@@ -26,9 +28,12 @@ public class Exc_740_DeleteAndEarn {
     }
 
     public static void main(String[] args) {
-        Exc_740_DeleteAndEarn de = new Exc_740_DeleteAndEarn();
-        System.out.println(de.deleteAndEarn(new int[]{3, 4, 2}));
-        System.out.println(de.deleteAndEarn(new int[]{2, 2, 3, 3, 3, 4}));
-        System.out.println(de.deleteAndEarn(new int[]{3,4,2,2,2,4,1,6}));
+//        Exc_740_DeleteAndEarn de = new Exc_740_DeleteAndEarn();
+//        System.out.println(de.deleteAndEarn(new int[]{3, 4, 2}));
+//        System.out.println(de.deleteAndEarn(new int[]{2, 2, 3, 3, 3, 4}));
+//        System.out.println(de.deleteAndEarn(new int[]{3,4,2,2,2,4,1,6}));
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put(null, null);
+        System.out.println(map.get(null));
     }
 }
