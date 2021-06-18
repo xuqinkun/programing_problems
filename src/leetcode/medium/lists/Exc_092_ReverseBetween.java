@@ -2,6 +2,9 @@ package leetcode.medium.lists;
 
 import leetcode.util.ListNode;
 
+import static leetcode.util.ListUtil.arrayToList;
+import static leetcode.util.ListUtil.printListNode;
+
 public class Exc_092_ReverseBetween {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
@@ -31,8 +34,8 @@ public class Exc_092_ReverseBetween {
     public static void main(String[] args) {
         Exc_092_ReverseBetween rb = new Exc_092_ReverseBetween();
         int[] a = {1,2,3,4,5};
-        ListNode listNode = ListNode.arrayToList(a);
-        ListNode.printListNode(listNode);
-        ListNode.printListNode(rb.reverseBetween(listNode, 1, 5));
+        ListNode listNode = arrayToList(a);
+        printListNode(listNode);
+        printListNode(rb.reverseBetween(listNode, 1, 5));
     }
 }

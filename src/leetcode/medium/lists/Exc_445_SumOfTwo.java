@@ -5,6 +5,8 @@ import leetcode.util.ListUtil;
 
 import java.util.Stack;
 
+import static leetcode.util.ListUtil.printListNode;
+
 /**
  * 给定两个非空链表来代表两个非负整数。数字最高位位于链表开始位置。
  * 它们的每个节点只存储单个数字。将这两数相加会返回一个新的链表。
@@ -109,8 +111,8 @@ public class Exc_445_SumOfTwo {
         ListNode l2 = ListUtil.stringToListNode("9");
         Exc_445_SumOfTwo st = new Exc_445_SumOfTwo();
         ListNode ans = st.addTwoNumbers(l1, l2);
-        ListNode.printListNode(l1);
-        ListNode.printListNode(l2);
-        ListNode.printListNode(ans);
+        printListNode(l1);
+        printListNode(l2);
+        printListNode(ans);
     }
 }

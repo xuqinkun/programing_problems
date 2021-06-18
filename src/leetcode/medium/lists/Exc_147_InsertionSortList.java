@@ -3,6 +3,8 @@ package leetcode.medium.lists;
 import leetcode.util.ListNode;
 import leetcode.util.ListUtil;
 
+import static leetcode.util.ListUtil.printListNode;
+
 public class Exc_147_InsertionSortList {
 
     public ListNode insertionSortList(ListNode head) {
@@ -33,8 +35,8 @@ public class Exc_147_InsertionSortList {
     public static void main(String[] args) {
         Exc_147_InsertionSortList isl = new Exc_147_InsertionSortList();
         ListNode l = ListUtil.stringToListNode("0");
-        ListNode.printListNode(l);
+        printListNode(l);
         ListNode l2 = isl.insertionSortList(l);
-        ListNode.printListNode(l2);
+        printListNode(l2);
     }
 }

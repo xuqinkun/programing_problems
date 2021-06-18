@@ -1,6 +1,7 @@
 package leetcode.medium.lists;
 
 import leetcode.util.ListNode;
+import leetcode.util.ListUtil;
 
 public class Exc_086_ListPartition {
 
@@ -36,7 +37,7 @@ public class Exc_086_ListPartition {
     public static void main(String[] args) {
         Exc_086_ListPartition lp = new Exc_086_ListPartition();
         int[] a = {1,4,3,2,5,2};
-        ListNode list = lp.partition(ListNode.arrayToList(a), 3);
-        ListNode.printListNode(list);
+        ListNode list = lp.partition(ListUtil.arrayToList(a), 3);
+        ListUtil.printListNode(list);
     }
 }

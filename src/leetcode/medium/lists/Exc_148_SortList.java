@@ -2,6 +2,9 @@ package leetcode.medium.lists;
 
 import leetcode.util.ListNode;
 
+import static leetcode.util.ListUtil.arrayToList;
+import static leetcode.util.ListUtil.printListNode;
+
 /**
  * Copyright (C), 2018-2020
  * FileName: Exc_148_SortList
@@ -52,10 +55,10 @@ public class Exc_148_SortList {
 
     public static void main(String[] args) {
         int[] a = {-1,5,3,4,0};
-        ListNode head = ListNode.arrayToList(a);
-        ListNode.printListNode(head);
+        ListNode head = arrayToList(a);
+        printListNode(head);
         Exc_148_SortList sl = new Exc_148_SortList();
         ListNode sortedList = sl.sortList(head);
-        ListNode.printListNode(sortedList);
+        printListNode(sortedList);
     }
 }

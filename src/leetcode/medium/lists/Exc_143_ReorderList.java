@@ -3,6 +3,8 @@ package leetcode.medium.lists;
 import leetcode.util.ListNode;
 import leetcode.util.ListUtil;
 
+import static leetcode.util.ListUtil.printListNode;
+
 public class Exc_143_ReorderList {
 
     public void reorderList(ListNode head) {
@@ -47,6 +49,6 @@ public class Exc_143_ReorderList {
         ListNode listNode = ListUtil.stringToListNode("1");
         Exc_143_ReorderList rl = new Exc_143_ReorderList();
         rl.reorderList(listNode);
-        ListNode.printListNode(listNode);
+        printListNode(listNode);
     }
 }

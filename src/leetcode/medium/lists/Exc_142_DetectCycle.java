@@ -2,6 +2,8 @@ package leetcode.medium.lists;
 
 import leetcode.util.ListNode;
 
+import static leetcode.util.ListUtil.constructCycleList;
+
 /**
  * Copyright (C), 2018-2020
  * FileName: Exc_142_DetectCycle
@@ -31,7 +33,7 @@ public class Exc_142_DetectCycle {
     public static void main(String[] args) {
         Exc_142_DetectCycle dc = new Exc_142_DetectCycle();
         int[] a = {3,2,0,-4};
-        ListNode head = ListNode.constructCycleList(a, 1);
+        ListNode head = constructCycleList(a, 1);
         ListNode ans = dc.detectCycle(head);
         System.out.println(ans.val);
     }
