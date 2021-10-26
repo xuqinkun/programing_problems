@@ -2,41 +2,38 @@ package leetcode.medium.dp;
 
 public class Exc_005_LongestPalindrome {
 
-    public String longestPalindrome(String s) {
-        int len = s.length();
-        if (len < 2) return s;
-        boolean[][] dp = new boolean[len][len];
-        for (int i = 0; i < len; i++) {
-            dp[i][i] = true;
-        }
-        int maxLen = 1, begin = 0;
-        for (int L = 2; L <= len; L++) {
-            for (int i = 0; i < len; i++) {
-                int j = L + i - 1;
-                if (j >= len) break;
-                if (s.charAt(i) == s.charAt(j)) {
-                    if (j - i < 3) {
-                        dp[i][j] = true;
-                    } else {
-                        dp[i][j] = dp[i + 1][j - 1];
-                    }
-                } else {
-                    dp[i][j] = false;
-                }
-                if (dp[i][j] && j - i + 1 > maxLen) {
-                    begin = i;
-                    maxLen = j - i + 1;
-                }
-            }
-        }
-        return s.substring(begin, begin + maxLen);
-    }
-
     public static void main(String[] args) {
         Exc_005_LongestPalindrome lp = new Exc_005_LongestPalindrome();
-//        System.out.println(lp.longestPalindrome("a"));
-//        System.out.println(lp.longestPalindrome("babad"));
-//        System.out.println(lp.longestPalindrome("cbbd"));
+        System.out.println(lp.longestPalindrome("ccc"));
+        System.out.println(lp.longestPalindrome("eabcb"));
+        System.out.println(lp.longestPalindrome("a"));
+        System.out.println(lp.longestPalindrome("babad"));
+        System.out.println(lp.longestPalindrome("cbbd"));
         System.out.println(lp.longestPalindrome("ac"));
+    }
+
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() < 1)
+            return "";
+        int start = 0, end = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int len1 = expandToCenter(s, i, i);
+            int len2 = expandToCenter(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
+            }
+        }
+
+        return s.substring(start, end + 1);
+    }
+
+    private int expandToCenter(String s, int left, int right) {
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        return right - left - 1;
     }
 }
