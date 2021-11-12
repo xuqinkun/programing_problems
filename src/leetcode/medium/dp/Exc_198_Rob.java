@@ -1,4 +1,4 @@
-package leetcode.easy.dp;
+package leetcode.medium.dp;
 
 /**
  * Copyright (C), 2018-2020
