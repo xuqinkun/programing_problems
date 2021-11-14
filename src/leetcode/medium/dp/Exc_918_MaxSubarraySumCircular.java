@@ -15,35 +15,38 @@ public class Exc_918_MaxSubarraySumCircular {
         System.out.println(mssc.maxSubarraySumCircular(new int[]{3, -2, 2, -3}));
     }
 
-    public int maxSubarraySumCircular(int[] nums) {
-        int len = nums.length;
-        int max = Math.max(maxSubArraySum(nums, 0, len - 2, true),
-                maxSubArraySum(nums, 1, len - 1, true));
-        return Math.max(max, maxSubArraySum(nums, 0, len - 1, false));
-    }
+    public int maxSubarraySumCircular(int[] A) {
+        int N = A.length;
 
-    private int maxSubArraySum(int[] nums, int l, int r, boolean cross) {
-        if (l > r) return Integer.MIN_VALUE;
-        if (l == r) return nums[l];
-        int sum = 0, maxSum = Integer.MIN_VALUE;
-        int pos = 0, lPos = 0;
-        for (int i = l; i <= r; i++) {
-            int num = nums[i];
-            if (sum + num < num) {
-                sum = num;
-                lPos = i;
-            } else {
-                sum += num;
-            }
-            if (maxSum <= sum) {
-                maxSum = sum;
-                pos = i;
-            }
+        int ans = A[0], cur = A[0];
+        for (int i = 1; i < N; ++i) {
+            cur = A[i] + Math.max(cur, 0);
+            ans = Math.max(ans, cur);
         }
-        if (pos == nums.length - 1 && cross) {
-            return maxSum + maxSubArraySum(nums, 0, lPos - 1, false);
-        } else {
-            return maxSum;
+
+        // ans is the answer for 1-interval subarrays.
+        // Now, let's consider all 2-interval subarrays.
+        // For each i, we want to know
+        // the maximum of sum(A[j:]) with j >= i+2
+
+        // rightsums[i] = A[i] + A[i+1] + ... + A[N-1]
+        int[] rightsums = new int[N];
+        rightsums[N-1] = A[N-1];
+        for (int i = N-2; i >= 0; --i)
+            rightsums[i] = rightsums[i+1] + A[i];
+
+        // maxright[i] = max_{j >= i} rightsums[j]
+        int[] maxright = new int[N];
+        maxright[N-1] = A[N-1];
+        for (int i = N-2; i >= 0; --i)
+            maxright[i] = Math.max(maxright[i+1], rightsums[i]);
+
+        int leftsum = 0;
+        for (int i = 0; i < N-2; ++i) {
+            leftsum += A[i];
+            ans = Math.max(ans, leftsum + maxright[i+2]);
         }
+
+        return ans;
     }
 }
