@@ -27,11 +27,16 @@ public class Exc_1314_MatrixBlockSum {
                 int downMost = Math.min(m - 1, i + k);
                 int leftMost = Math.max(0, j - k);
                 int rightMost = Math.min(n - 1, j + k);
+                if (i > 0) {
+                    ans[i][j] = ans[i-1][j];
+                    topMost = downMost;
+                }
                 for (int l = topMost; l <= downMost; l++) {
                     for (int o = leftMost; o <= rightMost; o++) {
                         ans[i][j] += mat[l][o];
                     }
                 }
+
             }
         }
         return ans;
