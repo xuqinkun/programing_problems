@@ -33,7 +33,7 @@ public class Exc_107_LevelTraversal2 {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{3, 9, 20, -1, -1, 15, 7});
+        TreeNode root = TreeNode.fromArray(new int[]{3, 9, 20, -1, -1, 15, 7});
         Exc_107_LevelTraversal2 exc = new Exc_107_LevelTraversal2();
         List<List<Integer>> ret = exc.levelOrderBottom(root);
         System.out.println(ret);

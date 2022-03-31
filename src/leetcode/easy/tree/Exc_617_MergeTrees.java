@@ -17,8 +17,8 @@ public class Exc_617_MergeTrees {
     }
 
     public static void main(String[] args) {
-        TreeNode t1 = TreeNode.arrayToTree(new int[]{1, 3, 2, 5});
-        TreeNode t2 = TreeNode.arrayToTree(new int[]{2, 1, 3, -1, -1, 4, 7});
+        TreeNode t1 = TreeNode.fromArray(new int[]{1, 3, 2, 5});
+        TreeNode t2 = TreeNode.fromArray(new int[]{2, 1, 3, -1, -1, 4, 7});
         Exc_617_MergeTrees mt = new Exc_617_MergeTrees();
         TreeNode root = mt.mergeTrees(t1, t2);
         TreeNode.print(root);

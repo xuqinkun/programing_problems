@@ -5,6 +5,8 @@ import leetcode.medium.lists.Exc_021_MergeTwoSortedLists;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListUtil {
 
@@ -39,19 +41,9 @@ public class ListUtil {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String line;
-        while ((line = in.readLine()) != null) {
-            ListNode l1 = stringToListNode(line);
-            line = in.readLine();
-            ListNode l2 = stringToListNode(line);
-
-            ListNode ret = new Exc_021_MergeTwoSortedLists().mergeTwoLists(l1, l2);
-
-            String out = listNodeToString(ret);
-
-            System.out.print(out);
-        }
+        List<String> list = new ArrayList<String>(10);
+        list.add(2, "1");
+        System.out.println(list.get(0));
     }
 
 

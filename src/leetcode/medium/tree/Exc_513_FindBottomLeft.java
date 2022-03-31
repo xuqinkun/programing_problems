@@ -41,7 +41,7 @@ public class Exc_513_FindBottomLeft {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4,-1, 5, 6,-1,-1,7};
-        TreeNode t = TreeNode.arrayToTree(a);
+        TreeNode t = TreeNode.fromArray(a);
         Exc_513_FindBottomLeft fb = new Exc_513_FindBottomLeft();
         System.out.println(fb.findBottomLeftValue(t));
     }

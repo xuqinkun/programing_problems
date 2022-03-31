@@ -20,7 +20,7 @@ public class Exc_538_ConvertBST {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{6, 4, 10, 2, 5, 7, 11});
+        TreeNode root = TreeNode.fromArray(new int[]{6, 4, 10, 2, 5, 7, 11});
         Exc_538_ConvertBST cb = new Exc_538_ConvertBST();
         cb.convertBST(root);
 

@@ -68,7 +68,7 @@ public class Exc_235_LowestCommonAncestor {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{6, 2, 8, 0, 4, 7, 9, -1, -1, 3, 5});
+        TreeNode root = TreeNode.fromArray(new int[]{6, 2, 8, 0, 4, 7, 9, -1, -1, 3, 5});
         Exc_235_LowestCommonAncestor lca = new Exc_235_LowestCommonAncestor();
         TreeNode ancestor = lca.lowestCommonAncestor2(root, new TreeNode(3), new TreeNode(5));
         System.out.println(ancestor.val);

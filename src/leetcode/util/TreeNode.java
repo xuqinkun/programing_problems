@@ -27,7 +27,7 @@ public class TreeNode {
                 '}';
     }
 
-    public static TreeNode arrayToTree(int[] arr) {
+    public static TreeNode fromArray(int[] arr) {
         int n = arr.length;
         if (n == 0) return null;
         TreeNode root = new TreeNode(arr[0]);

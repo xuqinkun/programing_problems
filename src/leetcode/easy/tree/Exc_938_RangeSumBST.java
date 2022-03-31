@@ -46,8 +46,8 @@ public class Exc_938_RangeSumBST {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{10, 5, 15, 3, 7, -1, 18});
-        TreeNode root2 = TreeNode.arrayToTree(new int[]{10,5,15,3,7,13,18,1,-1,6});
+        TreeNode root = TreeNode.fromArray(new int[]{10, 5, 15, 3, 7, -1, 18});
+        TreeNode root2 = TreeNode.fromArray(new int[]{10,5,15,3,7,13,18,1,-1,6});
         Exc_938_RangeSumBST sum = new Exc_938_RangeSumBST();
         System.out.println(sum.rangeSumBST2(root2, 6, 10));
     }

@@ -45,7 +45,7 @@ public class Exc_199_RightSideView {
     }
 
     public static void main(String[] args) {
-        TreeNode t = TreeNode.arrayToTree(new int[]{1,2,3,-1,5,-1,4,7});
+        TreeNode t = TreeNode.fromArray(new int[]{1,2,3,-1,5,-1,4,7});
         Exc_199_RightSideView rs = new Exc_199_RightSideView();
         System.out.println(rs.rightSideView(t));
     }

@@ -43,7 +43,7 @@ public class Codec {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{1, 2, 3, -1,-1,4, 5});
+        TreeNode root = TreeNode.fromArray(new int[]{1, 2, 3, -1,-1,4, 5});
         Codec ct = new Codec();
         String ser = ct.serialize(root);
         System.out.println(ser);

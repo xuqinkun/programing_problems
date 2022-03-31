@@ -44,7 +44,7 @@ public class Exc_113_PathSum {
 
     public static void main(String[] args) {
         int[] a = {0,1,1};
-        TreeNode root = TreeNode.arrayToTree(a);
+        TreeNode root = TreeNode.fromArray(a);
         Exc_113_PathSum ps = new Exc_113_PathSum();
         System.out.println(ps.pathSum(root, 1));
     }

@@ -63,7 +63,7 @@ public class Sword_037_CodeTree {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.arrayToTree(new int[]{1, 2, 3, 4, -1, 5});
+        TreeNode root = TreeNode.fromArray(new int[]{1, 2, 3, 4, -1, 5});
         Sword_037_CodeTree ct = new Sword_037_CodeTree();
         String ser = ct.serialize(root);
         System.out.println(ser);
